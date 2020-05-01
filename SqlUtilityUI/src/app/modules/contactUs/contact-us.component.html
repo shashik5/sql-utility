@@ -1,0 +1,37 @@
+<mat-card class="FormContainer">
+  <mat-card-header><mat-card-title class="Header">Contact Form</mat-card-title></mat-card-header>
+  <form>
+    <mat-form-field>
+      <input matInput placeholder="Name" [(ngModel)]="contactFormData.Name" name="Name" required />
+      <mat-error>
+        Please enter your name
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Email" [formControl]="emailFormControl" [(ngModel)]="contactFormData.Email" name="Email" required />
+      <mat-error *ngIf="emailFormControl.hasError('pattern')">
+        Please enter a valid email address
+      </mat-error>
+      <mat-error *ngIf="emailFormControl.hasError('required')">
+        Please enter your email
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <textarea class="MessageBox" matInput matTextareaAutosize placeholder="Message" [(ngModel)]="contactFormData.Message" name="Message" required></textarea>
+      <mat-error>
+        Please enter your message
+      </mat-error>
+    </mat-form-field>
+  </form>
+  <div class="FileUploader">
+    <button mat-raised-button (click)="openFileSelector()">Select File</button>
+    <span class="FileName">{{contactFormData.FileName}}</span>
+  </div>
+  <div class="Buttons">
+    <button mat-raised-button (click)="submit()" [disabled]="!validateForm()">Submit</button>
+  </div>
+</mat-card>
+
+<mat-card class="InfoContainer">
+  <span class="Note">You can also send your query/complaints/suggessions/bug report to <a href="mailto:support@sqlutility.in">support@sqlutility.in</a></span>
+</mat-card>

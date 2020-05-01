@@ -1,0 +1,2 @@
+CD ../
+ng serve --open

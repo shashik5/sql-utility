@@ -1,0 +1,35 @@
+@import "../variables.scss";
+
+main-menu {
+  display: block;
+  height: $menuHeight;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0px 0px 2px $menuShadowColor;
+  background-color: $menuColor;
+  z-index: 2;
+}
+
+custom-footer {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: $footerHeight;
+  box-shadow: 0px -2px 2px $footerShadowColor;
+  background-color: $footerColor;
+  z-index: 2;
+}
+
+.ContentBox {
+  display: block;
+  position: absolute !important;
+  left: 0;
+  right: 0;
+  top: $menuHeight;
+  bottom: $footerHeight;
+  z-index: 1;
+}

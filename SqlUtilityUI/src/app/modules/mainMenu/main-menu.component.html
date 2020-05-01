@@ -1,0 +1,12 @@
+<div class="AppDetail">
+  <span class="Logo"></span>
+  <span class="AppName">{{appName}}</span>
+  <span class="TransparentModal"></span>
+</div>
+<div class="MenuItems">
+  <a class="MenuItem" *ngFor="let menuItem of menuItems" routerLink="{{menuItem.redirectUrl}}" routerLinkActive="Active">
+    <span *ngIf="menuItem.isIconRequired" class="MenuIcon {{menuItem.iconClass}}"></span>
+    <span class="MenuText">{{menuItem.name}}</span>
+    <span class="TransparentModal"></span>
+  </a>
+</div>

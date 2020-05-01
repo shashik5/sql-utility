@@ -1,0 +1,19 @@
+<div class="MainBanner">
+  <img alt="BannerImage" />
+</div>
+<mat-card class="Content">
+  <mat-card-header><mat-card-title class="Header">Why SQL Utility?</mat-card-title></mat-card-header>
+  <div class="Details">
+    <div class="Detail" *ngFor="let point of whyUs">
+      <span class="Point">{{point}}</span>
+    </div>
+  </div>
+</mat-card>
+<mat-card class="Content">
+  <mat-card-header><mat-card-title class="Header">Features</mat-card-title></mat-card-header>
+  <div class="Details">
+    <div class="Detail" *ngFor="let point of features">
+      <span class="Point">{{point}}</span>
+    </div>
+  </div>
+</mat-card>

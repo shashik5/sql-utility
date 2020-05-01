@@ -1,0 +1,91 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlUtilityCore", "SqlUtilityCore\SqlUtilityCore.csproj", "{B56C7A6C-ECD2-46F4-B33C-307ED6002E77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlUtilityUnitTestProject", "SqlUtilityUnitTestProject\SqlUtilityUnitTestProject.csproj", "{8ACAD90B-57C9-4D62-AB85-95198CE225FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlUtilityWeb", "SqlUtilityWeb\SqlUtilityWeb.csproj", "{6FB552DF-E0B2-42D5-B313-87B99C221118}"
+	ProjectSection(ProjectDependencies) = postProject
+		{431E6C2F-0B9F-49C4-BEB8-CA30A0D95F42} = {431E6C2F-0B9F-49C4-BEB8-CA30A0D95F42}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlUtilityWebUnitTestProject", "SqlUtilityWebUnitTestProject\SqlUtilityWebUnitTestProject.csproj", "{121502FD-CEEF-4620-9D17-BC9D0F643A09}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{31FAB819-5089-48CA-AB1C-633E97B084BE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{57125F18-1734-4431-A065-1C1FC148ABB0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{8E00B919-63BC-41A9-A955-71E9BC3E3C0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlUtilityUI", "SqlUtilityUI\SqlUtilityUI.csproj", "{431E6C2F-0B9F-49C4-BEB8-CA30A0D95F42}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B56C7A6C-ECD2-46F4-B33C-307ED6002E77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B56C7A6C-ECD2-46F4-B33C-307ED6002E77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B56C7A6C-ECD2-46F4-B33C-307ED6002E77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B56C7A6C-ECD2-46F4-B33C-307ED6002E77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8ACAD90B-57C9-4D62-AB85-95198CE225FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ACAD90B-57C9-4D62-AB85-95198CE225FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ACAD90B-57C9-4D62-AB85-95198CE225FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ACAD90B-57C9-4D62-AB85-95198CE225FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FB552DF-E0B2-42D5-B313-87B99C221118}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FB552DF-E0B2-42D5-B313-87B99C221118}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FB552DF-E0B2-42D5-B313-87B99C221118}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FB552DF-E0B2-42D5-B313-87B99C221118}.Release|Any CPU.Build.0 = Release|Any CPU
+		{121502FD-CEEF-4620-9D17-BC9D0F643A09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{121502FD-CEEF-4620-9D17-BC9D0F643A09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{121502FD-CEEF-4620-9D17-BC9D0F643A09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{121502FD-CEEF-4620-9D17-BC9D0F643A09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{431E6C2F-0B9F-49C4-BEB8-CA30A0D95F42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{431E6C2F-0B9F-49C4-BEB8-CA30A0D95F42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{431E6C2F-0B9F-49C4-BEB8-CA30A0D95F42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{431E6C2F-0B9F-49C4-BEB8-CA30A0D95F42}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B56C7A6C-ECD2-46F4-B33C-307ED6002E77} = {31FAB819-5089-48CA-AB1C-633E97B084BE}
+		{8ACAD90B-57C9-4D62-AB85-95198CE225FE} = {31FAB819-5089-48CA-AB1C-633E97B084BE}
+		{6FB552DF-E0B2-42D5-B313-87B99C221118} = {8E00B919-63BC-41A9-A955-71E9BC3E3C0D}
+		{121502FD-CEEF-4620-9D17-BC9D0F643A09} = {8E00B919-63BC-41A9-A955-71E9BC3E3C0D}
+		{431E6C2F-0B9F-49C4-BEB8-CA30A0D95F42} = {57125F18-1734-4431-A065-1C1FC148ABB0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BA7CEFA9-800A-4355-A01E-6EC463241390}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://shashik5.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SqlUtilityCore\\SqlUtilityCore.csproj
+		SccProjectTopLevelParentUniqueName1 = SqlUtilitySourceCode.sln
+		SccProjectName1 = SqlUtilityCore
+		SccLocalPath1 = SqlUtilityCore
+		SccProjectUniqueName2 = SqlUtilityUnitTestProject\\SqlUtilityUnitTestProject.csproj
+		SccProjectTopLevelParentUniqueName2 = SqlUtilitySourceCode.sln
+		SccProjectName2 = SqlUtilityUnitTestProject
+		SccLocalPath2 = SqlUtilityUnitTestProject
+		SccProjectUniqueName3 = SqlUtilityWeb\\SqlUtilityWeb.csproj
+		SccProjectTopLevelParentUniqueName3 = SqlUtilitySourceCode.sln
+		SccProjectName3 = SqlUtilityWeb
+		SccLocalPath3 = SqlUtilityWeb
+		SccProjectUniqueName4 = SqlUtilityWebUnitTestProject\\SqlUtilityWebUnitTestProject.csproj
+		SccProjectTopLevelParentUniqueName4 = SqlUtilitySourceCode.sln
+		SccProjectName4 = SqlUtilityWebUnitTestProject
+		SccLocalPath4 = SqlUtilityWebUnitTestProject
+		SccProjectUniqueName5 = SqlUtilityUI\\SqlUtilityUI.csproj
+		SccProjectTopLevelParentUniqueName5 = SqlUtilitySourceCode.sln
+		SccProjectName5 = SqlUtilityUI
+		SccLocalPath5 = SqlUtilityUI
+	EndGlobalSection
+EndGlobal

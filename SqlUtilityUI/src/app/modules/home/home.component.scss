@@ -1,0 +1,32 @@
+.MainBanner {
+  height: 300px;
+}
+
+.Content {
+  width: 50%;
+  margin: 20px auto;
+  border-radius: 25px;
+  padding: 20px;
+  background-color: rgba(45, 157, 255, 0.95);
+  color: white;
+
+  .Header {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .Details {
+    .Detail {
+      font-size: 14px;
+      margin: 5px;
+
+      .Point {
+        &::before {
+          content: "•";
+          margin: 0 5px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

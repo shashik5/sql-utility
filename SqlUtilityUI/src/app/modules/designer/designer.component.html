@@ -1,0 +1,57 @@
+<div class="DesignerMenu" (click)="onMenuClick($event)">
+  <span class="MenuItem" *ngFor="let menuItem of menuItems" [attr.data-action]="menuItem.action" matTooltip="{{menuItem.description}}">{{menuItem.displayName}}</span>
+</div>
+<div class="DesignerTablesContainer">
+  <div class="Title">Tables</div>
+  <div class="DesignerTables" [perfectScrollbar] [contextMenu]="myContextMenu">
+    <mat-expansion-panel class="Table" *ngFor="let table of tablesData" [contextMenu]="myContextMenu" [contextMenuSubject]="table" [dragData]="table" [dragScope]="'Table'" [dragTransitClass]="'DragHelper'" draggable (onDragStart)="onDragStart()" (onDragEnd)="onDragEnd()">
+      <mat-expansion-panel-header>
+        <mat-panel-title matTooltip="{{table.Name}}" class="TableTitle">
+          {{table.Name}}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="Column" *ngFor="let column of table.Columns" matTooltip="{{column.Name}}" [contextMenu]="myContextMenu" [dragScope]="'Column'" [dragTransitClass]="'DragHelper'" [dragData]="[column, table]" draggable (onDragStart)="onDragStart()" (onDragEnd)="onDragEnd()">
+        {{column.Name}}
+      </div>
+    </mat-expansion-panel>
+  </div>
+</div>
+<div class="DesignerContainer">
+  <div class="HeaderContainer">
+    <span class="Header">Designer</span>
+    <mat-form-field class="QueryTypeSelector HideFloatingPlaceholder">
+      <mat-select placeholder="Query Type" (change)="onQueryTypeChange($event)" [(ngModel)]="designerData.QueryType">
+        <mat-option *ngFor="let query of supportedQueries" [value]="query.value">
+          {{ query.displayName }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="Designer">
+    <div class="DesignerDropArea" [class.Highlight]="properties.highlightDropArea" droppable (onDrop)="onTableOrColumnDrop($event)" [dropScope]="['Table', 'Column', 'ColumnReorder']">
+      <div class="DesignerTimeLine" [perfectScrollbar]="DESIGNER_PERFECT_SCROLLBAR_CONFIG">
+        <div *ngFor="let column of designerData.QueryData[0].ColumnList" class="Column" [dragScope]="'ColumnReorder'" [dragTransitClass]="'DragHelper'" [dragData]="column" draggable (onDragStart)="onDragStart()" (onDragEnd)="onDragEnd()">
+          <div class="Header">{{column.ColumnName}}</div>
+          <div class="Property" matTooltip="{{column.ColumnName}}">Column Name: {{column.ColumnName}}</div>
+          <div class="Property" *ngIf="column.Alias" matTooltip="{{column.Alias}}">Alias Name: {{column.Alias}}</div>
+          <div class="Property" *ngIf="column.BelongsToTable" matTooltip="{{column.BelongsToTable}}">Table: {{column.BelongsToTable}}</div>
+          <span class="DeleteButton" (click)="removeColumnFromDesigner(column)" matTooltip="Remove Column"></span>
+        </div>
+      </div>
+      <div class="TableRelationshipData">
+        <span *ngFor="let tableName of tablesInDesigner" class="Table">{{tableName}}<span class="DeleteButton" (click)="removeTableFromDesigner(tableName)">X</span></span>
+      </div>
+    </div>
+  </div>
+  <div class="HeaderContainer">
+    <span class="Header">Result</span>
+  </div>
+  <div class="DesignerResult"></div>
+</div>
+<context-menu #myContextMenu>
+  <ng-template *ngFor="let action of contextMenuActions" contextMenuItem let-item
+               [visible]="action.visible" [enabled]="action.enabled" [divider]="action.divider"
+               (execute)="action.click($event.item)">
+    {{ action.text }}
+  </ng-template>
+</context-menu>

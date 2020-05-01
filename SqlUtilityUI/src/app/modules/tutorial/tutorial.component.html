@@ -1,0 +1,12 @@
+<mat-card class="VideosContainer">
+  <mat-card-header><mat-card-title class="Header">Tutorial</mat-card-title></mat-card-header>
+  <mat-card class="VideoContainer" *ngFor="let videoItem of videoList">
+    <div class="VideoBlock">
+      <iframe class="Video" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen" [src]="videoItem.link"></iframe>
+    </div>
+    <div class="VideoDetails">
+      <span class="Title">{{videoItem.displayName}}</span>
+      <span class="Description">{{videoItem.description}}</span>
+    </div>
+  </mat-card>
+</mat-card>

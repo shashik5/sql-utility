@@ -1,0 +1,33 @@
+﻿{
+  "QueryType": "",
+  "QueryName": "",
+  "QueryData": [
+    {
+      "TableName": "",
+      "ColumnList": [
+        {
+          "ColumnName": "",
+          "Alias": "",
+          "ColumnOperation": "",
+          "DataType": "",
+          "MaxLength": "",
+          "AllowNull": false,
+          "IsPrimary": false,
+          "IsUnique": false,
+          "DefaultValue": "",
+          "Values": [],
+          "BelongsToTable": ""
+        }
+      ],
+      "TableClause": [
+        {
+          "ClauseType": "",
+          "ClauseValue": "",
+          "JoinType": "",
+          "JoinTableName": ""
+        }
+      ]
+    }
+  ],
+  "QueryClause": []
+}

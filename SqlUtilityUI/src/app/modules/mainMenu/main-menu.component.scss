@@ -1,0 +1,111 @@
+@import "../../../variables.scss";
+
+.AppDetail {
+  display: inline-block;
+  height: 100%;
+  cursor: default;
+  position: relative;
+
+  .Logo {
+    display: inline-block;
+    height: 100%;
+  }
+
+  .AppName {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+    line-height: $menuHeight;
+  }
+}
+
+.MenuItems {
+  display: inline-block;
+  height: 100%;
+  position: absolute;
+  right: 0;
+
+  .MenuItem {
+    display: inline-block;
+    height: 100%;
+    text-align: center;
+    cursor: pointer;
+    padding: 0 10px;
+    position: relative;
+    text-decoration: none;
+
+    .MenuIcon {
+      display: inline-block;
+      height: 100%;
+      width: $menuIconWidth;
+      background-image: url("../../../assets/sprites.png");
+      background-size: 300px;
+
+      &.Home {
+        background-position: -12px -7px;
+      }
+
+      &.Designer {
+        background-position: -63px -9px;
+      }
+
+      &.Tutorial {
+        background-position: -116px -10px;
+      }
+
+      &.Contact {
+        background-position: -173px -11px;
+      }
+    }
+
+    &.Active {
+      background-color: white;
+      border-radius: 5px;
+
+      .MenuIcon {
+        &.Home {
+          background-position: -13px -57px;
+        }
+
+        &.Designer {
+          background-position: -65px -59px;
+        }
+
+        &.Tutorial {
+          background-position: -117px -59px;
+        }
+
+        &.Contact {
+          background-position: -174px -61px;
+        }
+      }
+
+      .MenuText {
+        color: $menuColor;
+      }
+    }
+
+    .MenuText {
+      display: inline-block;
+      height: 100%;
+      font-weight: 600;
+      font-size: 14px;
+      vertical-align: top;
+      line-height: $menuHeight;
+      color: white;
+    }
+  }
+}
+
+.TransparentModal {
+  position: absolute;
+  display: block;
+  background-color: transparent;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

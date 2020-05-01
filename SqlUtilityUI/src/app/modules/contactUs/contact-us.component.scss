@@ -1,0 +1,61 @@
+@import "../../../variables.scss";
+
+.FormContainer {
+  width: 500px;
+  margin: 10px auto;
+
+  .Header {
+    font-size: 16px;
+    font-weight: 600;
+    color: $menuColor;
+  }
+
+  mat-form-field {
+    width: 100%;
+
+    .MessageBox {
+      max-height: 150px;
+      resize: none;
+    }
+  }
+
+  .FileUploader {
+    margin-top: 10px;
+
+    .FileName {
+      color: #757575;
+      margin-left: 5px;
+      width: 380px;
+      display: inline-block;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      vertical-align: middle;
+    }
+  }
+
+  .Buttons {
+    margin-top: 10px;
+    text-align: right;
+
+    button {
+      background-color: $menuColor;
+      color: white;
+
+      &[disabled] {
+        background-color: lightgray;
+      }
+    }
+  }
+}
+
+.InfoContainer {
+  width: 70%;
+  margin: 10px auto;
+  text-align: center;
+
+  .Note {
+    color: #868686;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+  }
+}

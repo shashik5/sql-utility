@@ -1,0 +1,72 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~perfect-scrollbar/css/perfect-scrollbar.css";
+@import "variables.scss";
+
+body {
+  font-family: Arial, Verdana, sans-serif;
+  font-size: 13px;
+  margin: 0;
+}
+
+.mat-focused {
+  .mat-form-field-ripple {
+    background-color: $menuColor !important;
+  }
+
+  .mat-input-placeholder.mat-form-field-placeholder {
+    color: $menuColor !important;
+  }
+}
+
+.ps__thumb-y, .ps__thumb-x {
+  background-color: $menuColor;
+}
+
+.HideFloatingPlaceholder.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-placeholder {
+  display: none !important;
+}
+
+.cdk-overlay-pane.ngx-contextmenu {
+  background-color: #fdfdfd;
+  padding: 0;
+  border-radius: 3px;
+  box-shadow: 0px 0px 5px darkgrey;
+
+  .dropdown.ngx-contextmenu {
+    .dropdown-menu {
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: block;
+        padding: 0;
+
+        a {
+          text-decoration: none;
+          line-height: 30px;
+          font-size: 14px;
+          color: #6d6d6d;
+          display: block;
+          padding: 0 15px;
+        }
+
+        &:hover {
+          box-shadow: 0px 0px 5px darkgrey;
+        }
+      }
+    }
+  }
+}
+
+.DragHelper {
+  opacity: 0.9 !important;
+  background-color: #1d1d1d !important;
+  color: white !important;
+  filter: initial !important;
+
+  .TableTitle, .Column {
+    background-color: #1d1d1d !important;
+    color: white !important;
+  }
+}
